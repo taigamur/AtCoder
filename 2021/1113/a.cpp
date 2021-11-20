@@ -16,6 +16,16 @@ ll INF = numeric_limits<ll>::max();
 
 
 int main(){
+    int N,K,A;
+    cin >> N >> K >> A;
 
+    int t = A;
+    for(int i = 0; i < K-1;i++){
+        t++;
+        if(t == N+1){
+            t = 1;
+        }
+    }
+    cout << t << endl;
 
 }

@@ -17,5 +17,15 @@ ll INF = numeric_limits<ll>::max();
 
 int main(){
 
+    ll N;
+    cin >> N;
+
+    ll ans = 0;
+
+    for(int i = 1; i*i*i <= N; i++){
+        int a = i;
+        int b = N / (i*b);
+    }
+    cout << ans << endl;
 
 }
