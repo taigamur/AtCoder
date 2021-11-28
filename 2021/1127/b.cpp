@@ -17,5 +17,22 @@ ll INF = numeric_limits<ll>::max();
 
 int main(){
 
+    ll x,y;
+    cin >> x >> y;
 
+    int a = x % 10;
+    int b = y % 10;
+
+    while(x > 0 && y > 0){
+        x = x / 10;
+        y = y / 10;
+        if(a + b >= 10){
+            cout << "Hard" << endl;
+            return 0;
+        }
+        a = x % 10;
+        b = y % 10;
+    }
+    cout << "Easy" << endl;
+    
 }

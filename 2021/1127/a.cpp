@@ -17,5 +17,18 @@ ll INF = numeric_limits<ll>::max();
 
 int main(){
 
+    string s1;
+    string s2;
+    cin >> s1;
+    cin >> s2;
 
+    if((s1[0] == '#' && s1[1] == '#') ||
+       (s2[0] == '#' && s2[1] == '#') ||
+       (s1[0] == '#' && s2[0] == '#') ||
+       (s1[1] == '#' && s2[1] == '#')
+    ){
+        cout << "Yes" << endl;
+    }else{
+        cout << "No" << endl;
+    }
 }
