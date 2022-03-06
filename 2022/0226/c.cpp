@@ -95,7 +95,7 @@ int main(){
     for(int i = 0; i < N-5; i++){
         int cnt = 0;
 
-        if()
+      
 
         for(int j = 0; j < 6; j++){
             if(mp[i+j][j] == 1) cnt++;
