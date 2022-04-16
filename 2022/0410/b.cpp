@@ -38,47 +38,40 @@ class Edge{
 // vector<Edge> G[MAX];
 
 
-long long ans = 1000000000000000000;
-
-ll N;
-
-ll calc(ll a,ll b){
-    return pow(a,3) + pow(a,2)*b + a*pow(b,2) + pow(b,3);
-}
-
-void f(ll a, ll b){
-
-    ll sum;
-    sum = calc(a,b-1);
-    if(sum < ans && sum > N){
-        ans = sum;
-        f(a,b-1);
-    }
-
-    sum = calc(a+1,b-1);
-    if(sum < ans && sum > N){
-        ans = sum;
-        f(a+1,b-1);
-    }
-
-    sum = calc(a-1,b-1);
-    if(sum < ans && sum > N){
-        ans = sum;
-        f(a-1,b-1);
-    }
-}
 
 int main(){
-    cin >> N;
+    int n;
+    cin >> n;
 
-    ll key = 0;
-    while(pow(key,3)*4 < N){
-        key++;
+    vector<string> s(n);
+    vector<string> t(n);
+
+    rep(i,0,n){
+        cin >> s[i] >> t[i];
     }
 
-    f(key,key);
+    vector<string> list;
 
-    cout << ans << endl;
+    rep(i,0,n){
+
+
+        rep(j,0,n){
+
+            if(i != j && (s[i] == s[j] || s[i] == t[j])){
+                rep(k,0,n){
+                    if(i != k && (t[i] == s[k] || t[i] == t[k] ) ){
+                        cout << "No" << endl;
+                        return 0;
+                    }
+                }
+            }
+            
+        }
+
+
+    }
+    cout << "Yes" << endl;
+    return 0;
 
 
 
